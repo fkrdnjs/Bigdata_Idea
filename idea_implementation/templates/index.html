@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="..\static\index_style.css">
+    <title>New:Run</title>
+</head>
+<body>
+    <div id="title-container">
+        <a href="..\templates\index.html"><h1>New:Run</h1></a>
+
+        <h2 id="exp">
+            아래 문항은 8문항으로 이루어져 있으며 직업 적성을 파악하기 위한 검사입니다.
+        </h2>
+    </div>
+
+    <div id="quiz-container">
+        <div id="questions">
+            <div class="question">
+                <h2>1. 나는 처음 만난 사람들과 대화하는 것이 두렵지 않다.</h2>
+                <div class="answers">
+                    <input type="radio" name="answer1" value="true" id="answer1-true">
+                    <label for="answer1-true">그렇다</label>
+
+                    <input type="radio" name="answer1" value="false" id="answer1-false">
+                    <label for="answer1-false" class="custom-margin">아니다</label>
+                </div>
+            </div>
+
+            <br><br>
+
+            <div class="question">
+                <h2>2. 나는 PPT, 엑셀, 한글과 같은 문서 작업을 잘 다룬다.</h2>
+                <div class="answers">
+                    <input type="radio" name="answer2" value="true" id="answer2-true">
+                    <label for="answer2-true">그렇다</label>
+
+                    <input type="radio" name="answer2" value="false" id="answer2-false">
+                    <label for="answer2-false" class="custom-margin">아니다</label>
+                </div>
+            </div>
+
+            <br><br>
+
+            <div class="question">
+                <h2>3. 나는 타인의 말에 공감을 잘하는 편이다.</h2>
+                <div class="answers">
+                    <input type="radio" name="answer3" value="true" id="answer3-true">
+                    <label for="answer3-true">그렇다</label>
+
+                    <input type="radio" name="answer3" value="false" id="answer3-false">
+                    <label for="answer3-false" class="custom-margin">아니다</label>
+                </div>
+            </div>
+
+            <br><br>
+
+            <div class="question">
+                <h2>4. 나는 모르는 문제가 발생했을 때 인터넷 검색을 통해 정보를 얻을 수 있다.</h2>
+                <div class="answers">
+                    <input type="radio" name="answer4" value="true" id="answer4-true">
+                    <label for="answer4-true">그렇다</label>
+
+                    <input type="radio" name="answer4" value="false" id="answer4-false">
+                    <label for="answer4-false" class="custom-margin">아니다</label>
+                </div>
+            </div>
+
+            <br><br>
+
+            <div class="question">
+                <h2>5. 나는 변화에 거부감이 없다.</h2>
+                <div class="answers">
+                    <input type="radio" name="answer5" value="true" id="answer5-true">
+                    <label for="answer5-true">그렇다</label>
+
+                    <input type="radio" name="answer5" value="false" id="answer5-false">
+                    <label for="answer5-false" class="custom-margin">아니다</label>
+                </div>
+            </div>
+
+            <br><br>
+
+            <div class="question">
+                <h2>6. 나는 정적인 것보다 동적인 활동을 좋아한다.</h2>
+                <div class="answers">
+                    <input type="radio" name="answer6" value="true" id="answer6-true">
+                    <label for="answer6-true">그렇다</label>
+
+                    <input type="radio" name="answer6" value="false" id="answer6-false">
+                    <label for="answer6-false" class="custom-margin">아니다</label>
+                </div>
+            </div>
+
+            <br><br>
+
+            <div class="question">
+                <h2>7. 나는 정해진 규칙을 따라 일을 처리하는 것을 선호한다.</h2>
+                <div class="answers">
+                    <input type="radio" name="answer7" value="true" id="answer7-true">
+                    <label for="answer7-true">그렇다</label>
+
+                    <input type="radio" name="answer7" value="false" id="answer7-false">
+                    <label for="answer7-false" class="custom-margin">아니다</label>
+                </div>
+            </div>
+
+            <br><br>
+
+            <div class="question">
+                <h2>8. 나는 거동에 문제가 없다.</h2>
+                <div class="answers">
+                    <input type="radio" name="answer8" value="true" id="answer8-true">
+                    <label for="answer8-true">그렇다</label>
+
+                    <input type="radio" name="answer8" value="false" id="answer8-false">
+                    <label for="answer8-false" class="custom-margin">아니다</label>
+                </div>
+            </div>
+            <br>
+        </div>
+        <br>
+        <button id="submit-btn" onclick="calculateResult()">제출</button>
+    </div>
+
+    <script src="..\static\index_script.js"></script>
+</body>
+</html>

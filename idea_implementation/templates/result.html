@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="..\static\result_style.css">
+    <title>New:Run</title>
+</head>
+
+<body>
+
+    <div id="title-container">
+        <a href="..\templates\index.html"><h1 id="tt">New:Run</h1></a>
+    
+        <h2 id="exp">
+            직업 적성 검사 결과
+        </h2>
+    </div>
+
+    <div id="result-container">
+        
+        <div id="result"></div><br>
+        <div id="job"></div> <br>
+        <div id="explain"></div><br>
+
+        <div id="buttons">
+            <a href="..\templates\message.html"><button id="button1">문자 서비스<br>신청하기</button></a>
+            <a href="https://goldenjob.or.kr/edu/apply_list.asp?catecode=05000000"><button id="button2">추천 직업 교육 수강하기</button></a>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const resultElement = document.getElementById("result");
+            const jobElement = document.getElementById("job");
+            const explainElement = document.getElementById("explain");
+
+            const highestjob = localStorage.getItem('highestjob');
+
+            resultElement.innerText = "가장 적합한 직업군은 " + highestjob + "입니다.";
+            
+            switch (highestjob){
+                case "의료":
+                    jobElement.innerText = "추천 직업에는 헬스케어 도우미, 의료 보조원, 말동무 등이 있습니다.\n";
+                    explainElement.innerText = "근무지 : 병원, 보건소, 관리사무소, 가정 방문\n" + "예상 월급 : 100 ~ 200 만원\n" + "예상 근무 시간 : 하루 최소 4시간 이상\n" + "하는 일 : 환자 말동무, 혈당 체크, 복용해야 할 약 관리"
+                    break;
+                case "마케팅":
+                    jobElement.innerText = "추천 직업에는 공공기관 홍보 부서 등이 있습니다.\n";
+                    explainElement.innerText = "근무지 : 시청 등 공공기관\n" + "예상 월급 : 100 ~ 200 만원\n" + "예상 근무 시간 : 하루 최소 4시간 이상\n" + "하는 일 : 지역사회 홍보 컨텐츠 제작"
+                    break;
+                case "IT":
+                    jobElement.innerText = "추천 직업에는 데이터 검수, 사무 보조 등이 있습니다.\n";
+                    explainElement.innerText = "근무지 : 자택, 시청 등 공공기관\n" + "예상 월급 : 100 ~ 200 만원\n" + "예상 근무 시간 : 하루 최소 4시간 이상\n" + "하는 일 : 문서 수신 및 발신, 서류 정리 등"
+                    break;
+                case "컨설팅":
+                    jobElement.innerText = "추천 직업에는 취업 컨설팅, 이직 컨설팅, 시니어 컨설팅 등이 있습니다.\n";
+                    explainElement.innerText = "근무지 : 가정 방문, 시청\n" + "예상 월급 : 100 ~ 200 만원\n" + "예상 근무 시간 : 하루 최소 4시간 이상\n" + "하는 일 : 고민 상담, 말동무, 컨설팅"
+                    break;
+                default:
+                    jobElement.innerText = "예의상 만들기";
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="..\static\message_style.css">
+    <title>New:Run</title>
+</head>
+<body>
+    <div id="title-container">
+        <a href="..\templates\index.html"><h1 id="tt">New:Run</h1></a>
+    
+        <h2 id="exp">
+            아래 문항은 문자 알림 서비스 동의 여부를 확인하는 문항입니다.
+        </h2>
+    </div>
+
+    <div id="quiz-container">
+        <div id="questions">
+            <div class="question">
+                <h2>1. 적성 직업과 관련된 교육 모집 시작 알림을 받고 싶어요.</h2>
+                <div class="answers">
+                    <input type="radio" name="answer1" value="true" id="answer1-true">
+                    <label for="answer1-true" >그렇다</label>
+
+                    <input type="radio" name="answer1" value="false" id="answer1-false">
+                    <label for="answer1-false" class="custom-margin">아니다</label>
+                </div>
+            </div>
+
+            <br><br>
+
+            <div class="question">
+                <h2>2. 적성 직업과 관련된 구인 정보가 올라오면 알림으로 받고 싶어요.</h2>
+                <div class="answers">
+                    <input type="radio" name="answer2" value="true" id="answer2-true">
+                    <label for="answer2-true">그렇다</label>
+
+                    <input type="radio" name="answer2" value="false" id="answer2-false">
+                    <label for="answer2-false" class="custom-margin">아니다</label>
+                </div>
+            </div>
+
+            
+            
+        </div>
+        <br>
+        <a href="..\templates\index.html" id="submit-link">
+            <button id="submit-btn">저장</button>
+        </a>
+        
+        <script>
+            document.getElementById('submit-link').addEventListener('click', function() {
+                alert('제출이 완료되었습니다.');
+            });
+        </script>
+    </div>
+</body>
+</html>
